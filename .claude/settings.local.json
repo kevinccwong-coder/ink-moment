@@ -2,7 +2,24 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:mabellau-calligraphy.com)",
-      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-turbopack)"
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --use-npm --no-turbopack)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(node -e \"const l = require\\('lucide-react'\\); console.log\\(Object.keys\\(l\\).filter\\(k => k.match\\(/^\\(Globe|Message|Video|Music|Camera|Image|Heart|Share|Link|External|Send|Palette\\)/i\\)\\).join\\('\\\\n'\\)\\)\")",
+      "Bash(node -e \"const l = require\\('lucide-react'\\); console.log\\(Object.keys\\(l\\).filter\\(k => k.match\\(/^\\(Play|Image|Camera|Film|Video|Music\\)/i\\)\\).join\\('\\\\n'\\)\\)\")",
+      "Bash(identify public/images/Calligraphy_001.png)",
+      "Bash(ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=p=0 public/images/Calligraphy_001.png)",
+      "Bash(python3 -c \"from PIL import Image; img=Image.open\\('public/images/Calligraphy_001.png'\\); print\\(img.size\\)\")",
+      "Bash(node -e \"const fs=require\\('fs'\\); const buf=fs.readFileSync\\('public/images/Calligraphy_001.png'\\); console.log\\('size:', buf.length, 'bytes'\\);\")",
+      "Bash(node -e \"const s = require\\('stripe'\\); console.log\\(s.LATEST_API_VERSION\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(node -e \"import\\('stripe'\\).then\\(s => { console.log\\('version:', s.default.LATEST_API_VERSION\\); }\\)\")",
+      "WebSearch",
+      "WebFetch(domain:www.youtube.com)",
+      "Bash(pip install *)",
+      "Bash(yt-dlp --version)",
+      "Bash(python -c ' *)",
+      "Bash(npx vercel *)"
     ]
   }
 }
