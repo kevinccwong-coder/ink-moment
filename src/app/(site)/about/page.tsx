@@ -71,7 +71,7 @@ export default function AboutPage() {
                 src="/images/mao_bi_small.png"
                 alt="Brush and ink"
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </div>
             <span className="text-xs uppercase tracking-[0.2em] text-warm-gray">
