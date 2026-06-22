@@ -112,7 +112,7 @@ export default function Navbar() {
         <div className="fixed inset-0 z-50 md:hidden">
           {/* Scrim */}
           <div
-            className="absolute inset-0 bg-black/20"
+            className="absolute inset-0 bg-black/50"
             onClick={() => setMobileOpen(false)}
           />
 
