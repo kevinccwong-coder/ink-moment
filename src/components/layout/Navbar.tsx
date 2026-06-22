@@ -98,10 +98,11 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileOpen(true)}
-            className="flex items-center justify-center p-1 text-charcoal transition-colors hover:text-ink md:hidden"
+            className="flex items-center gap-1.5 rounded-full border border-border-light bg-paper px-3 py-2 text-xs uppercase tracking-widest text-ink transition-colors hover:border-ink md:hidden"
             aria-label="Open menu"
           >
-            <Menu size={22} />
+            <Menu size={16} />
+            <span>Menu</span>
           </button>
         </div>
 
