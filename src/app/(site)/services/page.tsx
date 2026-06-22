@@ -8,7 +8,7 @@ export default function ServicesPage() {
     <>
       {/* ── Page header ──────────────────────────────────── */}
       <section className="border-b border-border-light bg-paper">
-        <div className="mx-auto max-w-7xl px-6 py-16 text-center sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-7xl px-6 py-20 text-center sm:px-10 lg:px-16">
           <span className="text-xs uppercase tracking-[0.2em] text-warm-gray">
             Services
           </span>
@@ -22,8 +22,8 @@ export default function ServicesPage() {
 
       {/* ── Intro ────────────────────────────────────────── */}
       <section className="bg-paper">
-        <div className="mx-auto max-w-3xl px-6 py-20 text-center sm:px-10 lg:px-16">
-          <h2 className="font-heading text-2xl font-light text-ink sm:text-3xl">
+        <div className="mx-auto max-w-3xl px-6 py-24 text-center sm:px-10 lg:px-16">
+          <h2 className="font-heading text-3xl font-light text-ink sm:text-4xl">
             Artistry in Motion, Stillness in Ink
           </h2>
           <p className="mt-6 text-sm leading-relaxed text-charcoal sm:text-base">
@@ -37,7 +37,7 @@ export default function ServicesPage() {
 
       {/* ── 1. Personal Commissions ──────────────────────── */}
       <section className="border-t border-border-light bg-paper">
-        <div className="mx-auto max-w-5xl px-6 py-20 sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-5xl px-6 py-24 sm:px-10 lg:px-16">
           <div className="grid items-start gap-12 md:grid-cols-2">
             <div className="flex aspect-[4/3] items-center justify-center bg-stone">
               <span className="select-none font-heading text-8xl leading-none text-accent/25">
@@ -48,7 +48,7 @@ export default function ServicesPage() {
               <span className="text-xs uppercase tracking-[0.2em] text-warm-gray">
                 Service 01
               </span>
-              <h2 className="mt-3 font-heading text-2xl font-medium text-ink">
+              <h2 className="mt-3 font-heading text-3xl font-light text-ink">
                 Personal Commissions
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-charcoal">
@@ -59,7 +59,7 @@ export default function ServicesPage() {
               </p>
               <ul className="mt-6 space-y-4">
                 <li>
-                  <h3 className="text-sm font-medium text-ink">
+                  <h3 className="font-heading text-sm font-medium text-ink">
                     Custom Script Fusion
                   </h3>
                   <p className="mt-1 text-sm leading-relaxed text-charcoal">
@@ -69,7 +69,7 @@ export default function ServicesPage() {
                   </p>
                 </li>
                 <li>
-                  <h3 className="text-sm font-medium text-ink">
+                  <h3 className="font-heading text-sm font-medium text-ink">
                     Mindful Poetic Blessings
                   </h3>
                   <p className="mt-1 text-sm leading-relaxed text-charcoal">
@@ -79,7 +79,7 @@ export default function ServicesPage() {
                   </p>
                 </li>
                 <li>
-                  <h3 className="text-sm font-medium text-ink">
+                  <h3 className="font-heading text-sm font-medium text-ink">
                     Tailored Formats
                   </h3>
                   <p className="mt-1 text-sm leading-relaxed text-charcoal">
@@ -96,13 +96,13 @@ export default function ServicesPage() {
 
       {/* ── 2. Corporate Partnerships ────────────────────── */}
       <section className="border-t border-border-light bg-stone">
-        <div className="mx-auto max-w-5xl px-6 py-20 sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-5xl px-6 py-24 sm:px-10 lg:px-16">
           <div className="grid items-start gap-12 md:grid-cols-2">
             <div className="order-2 md:order-2">
               <span className="text-xs uppercase tracking-[0.2em] text-warm-gray">
                 Service 02
               </span>
-              <h2 className="mt-3 font-heading text-2xl font-medium text-ink">
+              <h2 className="mt-3 font-heading text-3xl font-light text-ink">
                 Corporate Partnerships &amp; Brand Activations
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-charcoal">
@@ -113,7 +113,7 @@ export default function ServicesPage() {
               </p>
               <ul className="mt-6 space-y-4">
                 <li>
-                  <h3 className="text-sm font-medium text-ink">
+                  <h3 className="font-heading text-sm font-medium text-ink">
                     Live Calligraphy Demonstrations
                   </h3>
                   <p className="mt-1 text-sm leading-relaxed text-charcoal">
@@ -123,7 +123,7 @@ export default function ServicesPage() {
                   </p>
                 </li>
                 <li>
-                  <h3 className="text-sm font-medium text-ink">
+                  <h3 className="font-heading text-sm font-medium text-ink">
                     On-Site Guest Personalization
                   </h3>
                   <p className="mt-1 text-sm leading-relaxed text-charcoal">
@@ -134,7 +134,7 @@ export default function ServicesPage() {
                   </p>
                 </li>
                 <li>
-                  <h3 className="text-sm font-medium text-ink">
+                  <h3 className="font-heading text-sm font-medium text-ink">
                     Commercial Artwork &amp; Logo Design
                   </h3>
                   <p className="mt-1 text-sm leading-relaxed text-charcoal">
@@ -156,7 +156,7 @@ export default function ServicesPage() {
 
       {/* ── 3. Workshops ───────────────────────────────────── */}
       <section className="border-t border-border-light bg-paper">
-        <div className="mx-auto max-w-5xl px-6 py-20 sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-5xl px-6 py-24 sm:px-10 lg:px-16">
           <div className="grid items-start gap-12 md:grid-cols-2">
             <div className="flex aspect-[4/3] items-center justify-center bg-stone">
               <span className="select-none font-heading text-8xl leading-none text-accent/25">
@@ -167,7 +167,7 @@ export default function ServicesPage() {
               <span className="text-xs uppercase tracking-[0.2em] text-warm-gray">
                 Service 03
               </span>
-              <h2 className="mt-3 font-heading text-2xl font-medium text-ink">
+              <h2 className="mt-3 font-heading text-3xl font-light text-ink">
                 Workshops &amp; Mindful Ink Experiences
               </h2>
               <p className="mt-4 text-sm leading-relaxed text-charcoal">
@@ -177,7 +177,7 @@ export default function ServicesPage() {
               </p>
               <ul className="mt-6 space-y-4">
                 <li>
-                  <h3 className="text-sm font-medium text-ink">
+                  <h3 className="font-heading text-sm font-medium text-ink">
                     Mindfulness &amp; Calligraphy Basics
                   </h3>
                   <p className="mt-1 text-sm leading-relaxed text-charcoal">
@@ -187,7 +187,7 @@ export default function ServicesPage() {
                   </p>
                 </li>
                 <li>
-                  <h3 className="text-sm font-medium text-ink">
+                  <h3 className="font-heading text-sm font-medium text-ink">
                     Corporate Wellness &amp; Teambuilding
                   </h3>
                   <p className="mt-1 text-sm leading-relaxed text-charcoal">
@@ -197,7 +197,7 @@ export default function ServicesPage() {
                   </p>
                 </li>
                 <li>
-                  <h3 className="text-sm font-medium text-ink">
+                  <h3 className="font-heading text-sm font-medium text-ink">
                     Private &amp; Small Group Sessions
                   </h3>
                   <p className="mt-1 text-sm leading-relaxed text-charcoal">
@@ -214,7 +214,7 @@ export default function ServicesPage() {
 
       {/* ── CTA ────────────────────────────────────────────── */}
       <section className="border-t border-border-light bg-stone">
-        <div className="mx-auto max-w-2xl px-6 py-20 text-center sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-2xl px-6 py-24 text-center sm:px-10 lg:px-16">
           <h2 className="font-heading text-2xl font-light text-ink sm:text-3xl">
             Let&rsquo;s Create Together
           </h2>
