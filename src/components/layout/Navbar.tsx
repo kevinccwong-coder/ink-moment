@@ -37,7 +37,7 @@ export default function Navbar() {
   }, [mobileOpen]);
 
   return (
-    <header className="sticky top-0 z-50 bg-paper/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 bg-paper/80 backdrop-blur-md relative">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 sm:px-10 lg:px-16">
         {/* ── Logo ──────────────────────────────────────── */}
         <Link
@@ -97,45 +97,29 @@ export default function Navbar() {
           {/* Mobile hamburger */}
           <button
             type="button"
-            onClick={() => setMobileOpen(true)}
-            className="flex items-center gap-1.5 rounded-lg border border-ink/30 bg-paper px-4 py-2.5 text-xs uppercase tracking-widest text-ink transition-colors hover:border-ink md:hidden"
-            aria-label="Open menu"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="flex items-center gap-1.5 rounded-lg border border-border-light bg-paper px-3 py-2 text-xs uppercase tracking-widest text-ink transition-colors hover:border-ink hover:bg-stone/50 md:hidden"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
           >
-            <Menu size={18} />
+            {mobileOpen ? <X size={18} /> : <Menu size={18} />}
             <span>Menu</span>
           </button>
         </div>
 
       </div>
 
-      {/* ── Mobile drawer menu ──────────────────────────── */}
+      {/* ── Mobile dropdown menu ────────────────────────── */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-50 md:hidden">
+        <>
           {/* Scrim */}
           <div
-            className="absolute inset-0 bg-black/70"
+            className="fixed inset-0 z-40 bg-black/15 backdrop-blur-sm md:hidden"
             onClick={() => setMobileOpen(false)}
           />
 
-          {/* Drawer panel */}
-          <div className="absolute right-0 top-0 flex h-full w-72 flex-col bg-white shadow-xl">
-            {/* Header */}
-            <div className="flex items-center justify-between border-b border-gray-100 px-6 py-5">
-              <span className="font-heading text-sm tracking-wide text-ink">
-                Menu
-              </span>
-              <button
-                type="button"
-                onClick={() => setMobileOpen(false)}
-                className="flex items-center justify-center p-1 text-charcoal transition-colors hover:text-ink"
-                aria-label="Close menu"
-              >
-                <X size={20} />
-              </button>
-            </div>
-
-            {/* Links */}
-            <nav className="flex flex-col px-4 pt-4">
+          {/* Dropdown panel */}
+          <div className="absolute right-3 top-[calc(100%+8px)] z-50 w-64 origin-top-right rounded-2xl border border-border-light bg-paper/95 p-2 shadow-lg backdrop-blur-xl md:hidden">
+            <nav className="flex flex-col gap-0.5">
               {NAV_LINKS.map((link) => {
                 const isActive =
                   link.href === "/"
@@ -145,7 +129,8 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`rounded-md px-4 py-3 text-sm tracking-wide transition-colors ${
+                    onClick={() => setMobileOpen(false)}
+                    className={`rounded-xl px-4 py-3 text-sm tracking-wide transition-colors ${
                       isActive
                         ? "bg-stone font-medium text-ink"
                         : "text-charcoal hover:bg-stone hover:text-ink"
@@ -157,7 +142,7 @@ export default function Navbar() {
               })}
             </nav>
           </div>
-        </div>
+        </>
       )}
     </header>
   );
