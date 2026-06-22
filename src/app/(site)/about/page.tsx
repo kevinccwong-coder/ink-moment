@@ -66,7 +66,7 @@ export default function AboutPage() {
       <section className="bg-stone">
         <div className="mx-auto max-w-7xl px-6 py-24 sm:px-10 lg:px-16">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="relative mx-auto mb-10 h-32 w-32 overflow-hidden rounded-full bg-stone">
+            <div className="relative mx-auto mb-10 h-64 w-64 overflow-hidden bg-stone">
               <Image
                 src="/images/mao_bi_small.png"
                 alt="Brush and ink"
