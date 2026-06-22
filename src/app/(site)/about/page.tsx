@@ -11,12 +11,12 @@ export default function AboutPage() {
       <section className="bg-paper">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 py-20 sm:px-10 md:grid-cols-2 md:gap-16 md:py-32 lg:px-16">
           {/* Left: Profile image */}
-          <div className="relative aspect-[3/4] w-full overflow-hidden bg-stone md:order-1">
+          <div className="relative aspect-square w-full overflow-hidden bg-stone md:order-1">
             <Image
               src="/images/wo_small.png"
               alt="Cat Wong — Chinese calligraphy artist"
               fill
-              className="object-cover"
+              className="object-contain"
               priority
             />
           </div>
