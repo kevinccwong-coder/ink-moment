@@ -71,10 +71,10 @@ export default function ContactPage() {
             <div className="mt-10 flex items-center gap-3 border-t border-border-light pt-8">
               <Mail size={16} className="shrink-0 text-warm-gray" />
               <a
-                href="mailto:ink-moment@gmail.com"
+                href="mailto:ink.moment2026@gmail.com"
                 className="text-sm text-charcoal underline underline-offset-2 transition-colors hover:text-ink"
               >
-                ink-moment@gmail.com
+                ink.moment2026@gmail.com
               </a>
             </div>
           </div>

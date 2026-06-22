@@ -44,7 +44,7 @@ export default function ChatWidget() {
             </p>
 
             <a
-              href="mailto:ink-moment@gmail.com"
+              href="mailto:ink.moment2026@gmail.com"
               className="flex w-full items-center justify-center rounded-full border border-ink bg-transparent px-6 py-2.5 text-xs uppercase tracking-widest text-ink transition-all hover:bg-ink hover:text-paper"
             >
               Send an Email

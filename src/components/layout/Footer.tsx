@@ -4,7 +4,7 @@ import Link from "next/link";
 const SOCIAL_LINKS = [
   { label: "Instagram", href: "https://instagram.com/inkandmoment", icon: Image },
   { label: "YouTube", href: "https://youtube.com/@inkandmoment", icon: Play },
-  { label: "Email", href: "mailto:ink-moment@gmail.com", icon: Mail },
+  { label: "Email", href: "mailto:ink.moment2026@gmail.com", icon: Mail },
 ];
 
 export default function Footer() {
@@ -19,10 +19,10 @@ export default function Footer() {
 
         {/* ── Email ────────────────────────────────────── */}
         <a
-          href="mailto:ink-moment@gmail.com"
+          href="mailto:ink.moment2026@gmail.com"
           className="text-xs text-warm-gray transition-colors hover:text-ink"
         >
-          ink-moment@gmail.com
+          ink.moment2026@gmail.com
         </a>
 
         {/* ── Social links ─────────────────────────────── */}

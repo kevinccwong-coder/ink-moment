@@ -19,7 +19,9 @@
       "Bash(pip install *)",
       "Bash(yt-dlp --version)",
       "Bash(python -c ' *)",
-      "Bash(npx vercel *)"
+      "Bash(npx vercel *)",
+      "Bash(git check-ignore *)",
+      "Bash(echo \"exit: $?\")"
     ]
   }
 }
