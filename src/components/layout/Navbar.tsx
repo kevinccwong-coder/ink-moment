@@ -112,20 +112,20 @@ export default function Navbar() {
         <div className="fixed inset-0 z-50 md:hidden">
           {/* Scrim */}
           <div
-            className="absolute inset-0 bg-black/50"
+            className="absolute inset-0 bg-black/60"
             onClick={() => setMobileOpen(false)}
           />
 
           {/* Sliding panel */}
-          <div className="absolute right-0 top-0 flex h-full w-64 flex-col bg-paper shadow-xl">
+          <div className="absolute right-0 top-0 flex h-full w-72 flex-col bg-ink shadow-xl">
             <div className="flex items-center justify-between px-6 pt-6 pb-4">
-              <span className="font-heading text-base tracking-wide text-ink">
+              <span className="font-heading text-base tracking-wide text-paper">
                 Menu
               </span>
               <button
                 type="button"
                 onClick={() => setMobileOpen(false)}
-                className="flex items-center justify-center p-1 text-charcoal transition-colors hover:text-ink"
+                className="flex items-center justify-center p-1 text-warm-gray transition-colors hover:text-paper"
                 aria-label="Close menu"
               >
                 <X size={20} />
@@ -144,8 +144,8 @@ export default function Navbar() {
                     href={link.href}
                     className={`rounded-md px-3 py-2.5 text-sm tracking-wide transition-colors ${
                       isActive
-                        ? "bg-stone text-ink"
-                        : "text-charcoal hover:bg-stone hover:text-ink"
+                        ? "bg-paper/20 text-paper"
+                        : "text-paper/70 hover:bg-paper/10 hover:text-paper"
                     }`}
                   >
                     {link.label}
