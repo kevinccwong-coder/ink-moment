@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import { Menu, X, ShoppingBag } from "lucide-react";
 import { useCart } from "@/lib/cart-context";
 import { useCartUI } from "@/lib/cart-ui-context";
@@ -41,9 +42,18 @@ export default function Navbar() {
         {/* ── Logo ──────────────────────────────────────── */}
         <Link
           href="/"
-          className="font-heading text-xl tracking-wide text-ink transition-opacity hover:opacity-70"
+          className="flex items-center gap-2 transition-opacity hover:opacity-70"
         >
-          Ink & Moment<span className="text-warm-gray">墨時</span>
+          <Image
+            src="/images/logo.PNG"
+            alt="Ink & Moment"
+            width={32}
+            height={32}
+            className="h-7 w-auto"
+          />
+          <span className="font-heading text-xl tracking-wide text-ink">
+            Ink & Moment<span className="text-warm-gray">墨時</span>
+          </span>
         </Link>
 
         {/* ── Desktop nav ──────────────────────────────── */}
