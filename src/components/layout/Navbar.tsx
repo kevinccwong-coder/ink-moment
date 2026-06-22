@@ -142,10 +142,10 @@ export default function Navbar() {
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`rounded-md px-3 py-2.5 text-sm tracking-wide transition-colors ${
+                    className={`rounded-md px-3 py-2.5 text-sm tracking-wide text-white transition-colors ${
                       isActive
-                        ? "bg-paper/20 text-paper"
-                        : "text-paper/70 hover:bg-paper/10 hover:text-paper"
+                        ? "bg-white/20 font-medium"
+                        : "hover:bg-white/10"
                     }`}
                   >
                     {link.label}
