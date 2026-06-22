@@ -98,62 +98,56 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileOpen(true)}
-            className="flex items-center justify-center rounded-lg border border-border-light bg-stone/60 p-2.5 text-ink transition-colors hover:border-ink hover:bg-stone md:hidden"
+            className="flex items-center gap-1.5 rounded-lg border border-ink/30 bg-paper px-4 py-2.5 text-xs uppercase tracking-widest text-ink transition-colors hover:border-ink md:hidden"
             aria-label="Open menu"
           >
-            <Menu size={20} />
+            <Menu size={18} />
+            <span>Menu</span>
           </button>
         </div>
 
       </div>
 
-      {/* ── Mobile overlay ─────────────────────────────── */}
+      {/* ── Mobile fullscreen menu ──────────────────────── */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-50 md:hidden">
-          {/* Scrim */}
-          <div
-            className="absolute inset-0 bg-black/60"
-            onClick={() => setMobileOpen(false)}
-          />
-
-          {/* Sliding panel */}
-          <div className="absolute right-0 top-0 flex h-full w-72 flex-col bg-[#2a2a2a] shadow-xl">
-            <div className="flex items-center justify-between px-6 pt-6 pb-4">
-              <span className="font-heading text-base tracking-wide text-paper">
-                Menu
-              </span>
-              <button
-                type="button"
-                onClick={() => setMobileOpen(false)}
-                className="flex items-center justify-center p-1 text-warm-gray transition-colors hover:text-paper"
-                aria-label="Close menu"
-              >
-                <X size={20} />
-              </button>
-            </div>
-
-            <nav className="flex flex-col gap-1 px-4">
-              {NAV_LINKS.map((link) => {
-                const isActive =
-                  link.href === "/"
-                    ? pathname === "/"
-                    : pathname.startsWith(link.href);
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`rounded-md px-3 py-2.5 text-sm tracking-wide text-white transition-colors ${
-                      isActive
-                        ? "bg-white/20 font-medium"
-                        : "hover:bg-white/10"
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                );
-              })}
-            </nav>
+        <div className="fixed inset-0 z-50 flex flex-col bg-[#2a2a2a] md:hidden">
+          {/* Close button */}
+          <div className="flex items-center justify-between px-6 pt-5 pb-2">
+            <span className="font-heading text-base tracking-wide text-white/60">
+              Menu
+            </span>
+            <button
+              type="button"
+              onClick={() => setMobileOpen(false)}
+              className="flex items-center justify-center rounded-lg border border-white/20 p-2.5 text-white transition-colors hover:border-white/50"
+              aria-label="Close menu"
+            >
+              <X size={20} />
+            </button>
           </div>
+
+          {/* Navigation links */}
+          <nav className="flex flex-col gap-1 px-6 pt-12">
+            {NAV_LINKS.map((link) => {
+              const isActive =
+                link.href === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`border-b border-white/10 px-1 py-4 text-lg tracking-wide text-white transition-colors ${
+                    isActive
+                      ? "font-medium opacity-100"
+                      : "opacity-70 hover:opacity-100"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </nav>
         </div>
       )}
     </header>
