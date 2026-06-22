@@ -41,12 +41,12 @@ export default function HomePage() {
         </div>
 
         {/* ── Right: Calligraphy artwork ──────────────── */}
-        <div className="relative mt-12 min-h-[75vh] w-full md:mt-0 md:min-h-[calc(100dvh-4rem)] md:aspect-auto">
+        <div className="relative mt-12 min-h-[85vh] w-full md:mt-0 md:min-h-[calc(100dvh-4rem)] md:aspect-auto">
           <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-accent/10 md:-right-20 md:-top-20 md:h-80 md:w-80" />
           <div className="absolute -bottom-8 -left-8 h-32 w-32 rounded-full bg-accent/8 md:-bottom-16 md:-left-16 md:h-64 md:w-64" />
 
           <div className="relative z-10 flex h-full w-full items-center justify-center">
-            <div className="relative h-5/6 w-full">
+            <div className="relative h-[92%] w-full">
               <Image
                 src="/images/Calligraphy_001.png"
                 alt="Chinese calligraphy artwork"
