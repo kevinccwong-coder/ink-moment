@@ -117,7 +117,7 @@ export default function Navbar() {
           />
 
           {/* Sliding panel */}
-          <div className="absolute right-0 top-0 flex h-full w-72 flex-col bg-ink shadow-xl">
+          <div className="absolute right-0 top-0 flex h-full w-72 flex-col bg-[#2a2a2a] shadow-xl">
             <div className="flex items-center justify-between px-6 pt-6 pb-4">
               <span className="font-heading text-base tracking-wide text-paper">
                 Menu
