@@ -275,7 +275,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3">
             {[
-              { char: "靜", label: "Stillness in motion" },
+              { char: "靜", label: "Stillness in motion", image: "/images/silence_small.png" },
               { char: "氣", label: "The breath of ink" },
               { char: "心", label: "Heart on paper" },
               { char: "道", label: "The way of the brush" },
@@ -283,16 +283,25 @@ export default function HomePage() {
               { char: "空", label: "Empty & full" },
               { char: "流", label: "Going with the flow" },
               { char: "光", label: "Chasing light" },
-            ].map(({ char, label }) => (
+            ].map(({ char, label, image }) => (
               <div
                 key={char}
                 className="group relative aspect-square overflow-hidden bg-stone"
               >
-                <div className="flex h-full w-full items-center justify-center transition-all duration-500 group-hover:scale-110">
-                  <span className="select-none font-heading text-5xl leading-none text-accent/25 transition-all duration-500 group-hover:text-accent/45 sm:text-6xl">
-                    {char}
-                  </span>
-                </div>
+                {image ? (
+                  <Image
+                    src={image}
+                    alt={label}
+                    fill
+                    className="object-cover transition-all duration-500 group-hover:scale-110"
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center transition-all duration-500 group-hover:scale-110">
+                    <span className="select-none font-heading text-5xl leading-none text-accent/25 transition-all duration-500 group-hover:text-accent/45 sm:text-6xl">
+                      {char}
+                    </span>
+                  </div>
+                )}
                 <div className="absolute inset-0 flex items-end p-3 opacity-0 transition-opacity duration-300 group-hover:opacity-100 sm:p-4">
                   <span className="text-[10px] uppercase tracking-[0.15em] text-ink sm:text-xs">
                     {label}
