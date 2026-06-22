@@ -13,7 +13,7 @@ export default function AboutPage() {
           {/* Left: Profile image */}
           <div className="relative aspect-[3/4] w-full overflow-hidden bg-stone md:order-1">
             <Image
-              src="/images/wo.png"
+              src="/images/wo_small.png"
               alt="Cat Wong — Chinese calligraphy artist"
               fill
               className="object-cover"
