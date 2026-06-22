@@ -108,46 +108,55 @@ export default function Navbar() {
 
       </div>
 
-      {/* ── Mobile fullscreen menu ──────────────────────── */}
+      {/* ── Mobile drawer menu ──────────────────────────── */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-50 flex flex-col bg-[#2a2a2a] md:hidden">
-          {/* Close button */}
-          <div className="flex items-center justify-between px-6 pt-5 pb-2">
-            <span className="font-heading text-base tracking-wide text-white/60">
-              Menu
-            </span>
-            <button
-              type="button"
-              onClick={() => setMobileOpen(false)}
-              className="flex items-center justify-center rounded-lg border border-white/20 p-2.5 text-white transition-colors hover:border-white/50"
-              aria-label="Close menu"
-            >
-              <X size={20} />
-            </button>
-          </div>
+        <div className="fixed inset-0 z-50 md:hidden">
+          {/* Scrim */}
+          <div
+            className="absolute inset-0 bg-black/70"
+            onClick={() => setMobileOpen(false)}
+          />
 
-          {/* Navigation links */}
-          <nav className="flex flex-col gap-1 px-6 pt-12">
-            {NAV_LINKS.map((link) => {
-              const isActive =
-                link.href === "/"
-                  ? pathname === "/"
-                  : pathname.startsWith(link.href);
-              return (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className={`border-b border-white/10 px-1 py-4 text-lg tracking-wide text-white transition-colors ${
-                    isActive
-                      ? "font-medium opacity-100"
-                      : "opacity-70 hover:opacity-100"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              );
-            })}
-          </nav>
+          {/* Drawer panel */}
+          <div className="absolute right-0 top-0 flex h-full w-72 flex-col bg-white shadow-xl">
+            {/* Header */}
+            <div className="flex items-center justify-between border-b border-gray-100 px-6 py-5">
+              <span className="font-heading text-sm tracking-wide text-ink">
+                Menu
+              </span>
+              <button
+                type="button"
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center justify-center p-1 text-charcoal transition-colors hover:text-ink"
+                aria-label="Close menu"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            {/* Links */}
+            <nav className="flex flex-col px-4 pt-4">
+              {NAV_LINKS.map((link) => {
+                const isActive =
+                  link.href === "/"
+                    ? pathname === "/"
+                    : pathname.startsWith(link.href);
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className={`rounded-md px-4 py-3 text-sm tracking-wide transition-colors ${
+                      isActive
+                        ? "bg-stone font-medium text-ink"
+                        : "text-charcoal hover:bg-stone hover:text-ink"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
+            </nav>
+          </div>
         </div>
       )}
     </header>
