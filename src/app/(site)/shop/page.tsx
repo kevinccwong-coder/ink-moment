@@ -9,8 +9,9 @@ const PRODUCTS = [
     id: "stillness",
     title: "Stillness",
     subtitle: "靜",
-    price: 23,
+    price: 99,
     image: "/images/Calligraphy_001.png",
+    objectFit: "contain",
   },
   {
     id: "harmony",
@@ -91,7 +92,7 @@ export default function ShopPage() {
                       src={product.image}
                       alt={product.title}
                       fill
-                      className="object-cover transition-all duration-500 group-hover:scale-105"
+                      className={`${product.objectFit === "contain" ? "object-contain p-4" : "object-cover"} transition-all duration-500 group-hover:scale-105`}
                     />
                   </div>
                 ) : (
