@@ -14,6 +14,14 @@ const PRODUCTS = [
     objectFit: "contain",
   },
   {
+    id: "slow-walking",
+    title: "Slow Walking",
+    subtitle: "慢行",
+    price: 49,
+    image: "/images/slow_walking.jpeg",
+    objectFit: "contain",
+  },
+  {
     id: "harmony",
     title: "Harmony",
     subtitle: "和",
