@@ -38,9 +38,26 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-paper/80 backdrop-blur-md relative">
-      <div className="mx-auto flex h-16 max-w-7xl items-center px-6 sm:px-10 lg:px-16">
-        {/* ── Desktop nav (left) ─────────────────────── */}
-        <nav className="hidden items-center gap-8 md:flex md:flex-1">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 sm:px-10 lg:px-16">
+        {/* ── Logo (left) ──────────────────────────────── */}
+        <Link
+          href="/"
+          className="flex items-center gap-2 transition-opacity hover:opacity-70"
+        >
+          <Image
+            src="/images/logo.PNG"
+            alt="Ink & Moment"
+            width={32}
+            height={32}
+            className="h-7 w-auto"
+          />
+          <span className="font-heading text-xl tracking-wide text-ink">
+            Ink & Moment<span className="text-warm-gray">墨時</span>
+          </span>
+        </Link>
+
+        {/* ── Desktop nav ──────────────────────────────── */}
+        <nav className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => {
             const isActive =
               link.href === "/"
@@ -60,25 +77,8 @@ export default function Navbar() {
           })}
         </nav>
 
-        {/* ── Logo (center) ──────────────────────────────── */}
-        <Link
-          href="/"
-          className="absolute left-1/2 flex -translate-x-1/2 items-center gap-2 transition-opacity hover:opacity-70"
-        >
-          <Image
-            src="/images/logo.PNG"
-            alt="Ink & Moment"
-            width={32}
-            height={32}
-            className="h-7 w-auto"
-          />
-          <span className="font-heading text-xl tracking-wide text-ink">
-            Ink & Moment<span className="text-warm-gray">墨時</span>
-          </span>
-        </Link>
-
         {/* ── Right: cart + mobile toggle ─────────────── */}
-        <div className="ml-auto flex items-center gap-3">
+        <div className="flex items-center gap-3">
           {/* Cart icon */}
           <button
             type="button"
