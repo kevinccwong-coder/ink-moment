@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <>
       {/* ── Hero ──────────────────────────────────────────── */}
-      <section className="mx-auto grid min-h-[calc(100dvh-4rem)] max-w-7xl grid-cols-1 px-6 sm:px-10 md:grid-cols-2 lg:px-16">
+      <section className="mx-auto grid max-w-7xl grid-cols-1 px-6 sm:px-10 md:min-h-[calc(100dvh-4rem)] md:grid-cols-2 lg:px-16">
         {/* ── Left: Text ──────────────────────────────── */}
         <div className="flex flex-col justify-center py-20 md:py-0 md:pr-12">
           <span className="mb-4 text-xs uppercase tracking-[0.2em] text-warm-gray">
@@ -41,9 +41,9 @@ export default function HomePage() {
         </div>
 
         {/* ── Right: Calligraphy artwork ──────────────── */}
-        <div className="relative hidden md:block md:min-h-[calc(100dvh-4rem)]">
-          <div className="absolute -right-20 -top-20 h-80 w-80 rounded-full bg-accent/10" />
-          <div className="absolute -bottom-16 -left-16 h-64 w-64 rounded-full bg-accent/8" />
+        <div className="relative mt-12 aspect-[3/5] w-full md:mt-0 md:min-h-[calc(100dvh-4rem)] md:aspect-auto">
+          <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-accent/10 md:-right-20 md:-top-20 md:h-80 md:w-80" />
+          <div className="absolute -bottom-8 -left-8 h-32 w-32 rounded-full bg-accent/8 md:-bottom-16 md:-left-16 md:h-64 md:w-64" />
 
           <div className="relative z-10 flex h-full w-full items-center justify-center">
             <div className="relative h-5/6 w-full">
