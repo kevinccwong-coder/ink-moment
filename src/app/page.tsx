@@ -304,12 +304,12 @@ export default function HomePage() {
 
           <div className="mt-10 text-center">
             <a
-              href="https://instagram.com/mabellaucalligraphy"
+              href="https://www.instagram.com/lampou_cat?igsh=bHM2enNiNnc3cW5u"
               target="_blank"
               rel="noopener noreferrer"
               className={BTN_PRIMARY}
             >
-              Follow &commat;mabellaucalligraphy
+              Follow &commat;lampou_cat
             </a>
           </div>
         </div>
