@@ -276,8 +276,8 @@ export default function HomePage() {
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3">
             {[
               { char: "靜", label: "Stillness in motion", image: "/images/silence_small.png" },
-              { char: "氣", label: "The breath of ink" },
-              { char: "心", label: "Heart on paper" },
+              { char: "氣", label: "The breath of ink", image: "/images/qi_small.png" },
+              { char: "心", label: "Heart on paper", image: "/images/heart_small.png" },
               { char: "道", label: "The way of the brush" },
               { char: "美", label: "Finding beauty" },
               { char: "空", label: "Empty & full" },
